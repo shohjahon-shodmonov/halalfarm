@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:halolfarm/constants/const.dart';
 
-class OnBoardingOne extends StatelessWidget {
-  const OnBoardingOne({Key? key}) : super(key: key);
+class OnBoardingThree extends StatelessWidget {
+  const OnBoardingThree({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +15,11 @@ class OnBoardingOne extends StatelessWidget {
             width: double.infinity,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(40),
+                bottomRight: Radius.circular(40),
               ),
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage('assets/images/onboarding1.png'),
+                image: AssetImage('assets/images/onboarding3.png'),
               ),
             ),
           ),
@@ -28,7 +28,7 @@ class OnBoardingOne extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: Container(
               child: Text(
-                "Sevimli hayvonlaringizni onlayn sotib oling",
+                "Hayvoningizni istalgan paytda yetkazib beramiz",
                 style: TextStyle(
                   fontSize: 26,
                   fontWeight: FontWeight.bold,
@@ -43,7 +43,7 @@ class OnBoardingOne extends StatelessWidget {
             width: double.infinity,
             height: MediaQuery.of(context).size.height * 0.09,
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Constants.kPrimaryColor),
+              style: ElevatedButton.styleFrom(primary: ColorConstants.kPrimaryColor),
               child: Text("Keyingisi"),
               onPressed: () {},
             ),

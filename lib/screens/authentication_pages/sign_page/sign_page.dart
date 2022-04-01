@@ -9,7 +9,7 @@ class Sign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Constants.kPrimaryColor,
+      backgroundColor: ColorConstants.kPrimaryColor,
       body: Column(
         children: [
           Padding(

@@ -40,7 +40,7 @@ class OnBoardingTwo extends StatelessWidget {
             width: double.infinity,
             height: MediaQuery.of(context).size.height * 0.09,
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Constants.kPrimaryColor),
+              style: ElevatedButton.styleFrom(primary: ColorConstants.kPrimaryColor),
               child: Text("Keyingisi"),
               onPressed: () {},
             ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:halolfarm/constants/const.dart';
-import 'package:halolfarm/core/components/halolfarm_icon.dart';
+import 'package:halolfarm/screens/language_select/lang_select_components/halolfarm_icon.dart';
 
 class LanguageSelect extends StatefulWidget {
   const LanguageSelect({Key? key}) : super(key: key);
@@ -74,7 +74,7 @@ class _LanguageSelectState extends State<LanguageSelect> {
             width: double.infinity,
             height: MediaQuery.of(context).size.height * 0.09,
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Constants.kPrimaryColor),
+              style: ElevatedButton.styleFrom(primary: ColorConstants.kPrimaryColor),
               child: Text("Keyingisi"),
               onPressed: () {},
             ),

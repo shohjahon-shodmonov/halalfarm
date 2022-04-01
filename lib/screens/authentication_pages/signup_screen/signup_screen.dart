@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:halolfarm/constants/const.dart';
-import 'package:halolfarm/core/components/input_decoration.dart';
-import 'package:halolfarm/core/components/sign_up_appbar.dart';
-import 'package:halolfarm/core/components/signup_with_social_network.dart';
+import 'package:halolfarm/screens/authentication_pages/signup_screen/signup_components/input_decoration.dart';
+import 'package:halolfarm/screens/authentication_pages/auth_components/sign_up_appbar.dart';
+import 'package:halolfarm/screens/authentication_pages/signup_screen/signup_components/signup_with_social_network.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -91,8 +91,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     primary: _nameController.text == null
-                        ? Constants.kDisabledColor
-                        : Constants.kPrimaryColor),
+                        ? ColorConstants.kDisabledColor
+                        : ColorConstants.kPrimaryColor),
                 child: Text("Keyingisi"),
                 onPressed: () {}),
           ),

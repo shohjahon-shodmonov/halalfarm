@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:halolfarm/constants/const.dart';
-import 'package:halolfarm/screens/home_screen.dart';
+import 'package:halolfarm/screens/home_screen/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Constants.kPrimaryColor,
+      backgroundColor: ColorConstants.kPrimaryColor,
       body: Center(
         child: Image.asset('assets/icons/splash_icon.png'),
       ),

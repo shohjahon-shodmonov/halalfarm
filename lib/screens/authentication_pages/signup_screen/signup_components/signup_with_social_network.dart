@@ -15,7 +15,7 @@ class SignUpWithSocialNetworkAccounts extends StatelessWidget {
           width: double.infinity,
           height: MediaQuery.of(context).size.height * 0.09,
           child: ElevatedButton(
-            style: ElevatedButton.styleFrom(primary: Constants.kGreyColor),
+            style: ElevatedButton.styleFrom(primary: ColorConstants.kGreyColor),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -41,7 +41,7 @@ class SignUpWithSocialNetworkAccounts extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.09,
                 child: ElevatedButton(
                   style:
-                      ElevatedButton.styleFrom(primary: Constants.kGreyColor),
+                      ElevatedButton.styleFrom(primary: ColorConstants.kGreyColor),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -67,7 +67,7 @@ class SignUpWithSocialNetworkAccounts extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.09,
                 child: ElevatedButton(
                   style:
-                      ElevatedButton.styleFrom(primary: Constants.kGreyColor),
+                      ElevatedButton.styleFrom(primary: ColorConstants.kGreyColor),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
