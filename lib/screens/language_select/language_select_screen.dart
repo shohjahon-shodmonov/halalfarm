@@ -15,7 +15,7 @@ class _LanguageSelectState extends State<LanguageSelect> {
     return Scaffold(
       body: Column(
         children: [
-          HalolFarmIcon(),
+          const HalolFarmIcon(),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.2,
             child: Column(
