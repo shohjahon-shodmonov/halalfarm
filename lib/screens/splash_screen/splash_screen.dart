@@ -13,14 +13,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Future.delayed(
-      Duration(seconds: 2),
+      const Duration(seconds: 3),
       () {
-        Navigator.pushAndRemoveUntil(
-            context,
-            MaterialPageRoute(
-              builder: (context) => HomeScreen(),
-            ),
-            (route) => false);
+        Navigator.pushNamedAndRemoveUntil(
+            context, '/initial', (route) => false);
       },
     );
     super.initState();
@@ -31,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: ColorConstants.kPrimaryColor,
       body: Center(
-        child: Image.asset('assets/icons/splash_icon.png'),
+        child: Image.asset('assets/icons/halal_header/halal_logo_smaller.png'),
       ),
     );
   }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:halolfarm/constants/const.dart';
 
-class OnBoardingOne extends StatelessWidget {
-  const OnBoardingOne({Key? key}) : super(key: key);
+class OnBoardingScreen extends StatelessWidget {
+  const OnBoardingScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class OnBoardingOne extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.all(0),
+            margin: const EdgeInsets.all(0),
             height: MediaQuery.of(context).size.height * 0.6,
             width: double.infinity,
             decoration: BoxDecoration(

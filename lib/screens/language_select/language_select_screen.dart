@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:halolfarm/constants/const.dart';
+import 'package:halolfarm/core/components/size_config.dart';
 import 'package:halolfarm/screens/language_select/lang_select_components/halolfarm_icon.dart';
 
 class LanguageSelect extends StatefulWidget {
@@ -12,6 +13,7 @@ class LanguageSelect extends StatefulWidget {
 class _LanguageSelectState extends State<LanguageSelect> {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
       body: Column(
         children: [
@@ -19,7 +21,7 @@ class _LanguageSelectState extends State<LanguageSelect> {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.2,
             child: Column(
-              children: [
+              children: const [
                 Text(
                   "Tilni tanlang",
                   style: TextStyle(
@@ -44,18 +46,18 @@ class _LanguageSelectState extends State<LanguageSelect> {
               height: MediaQuery.of(context).size.height * 0.3,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: Color(0xFFF2F1F7),
+                color: ColorConstants.langSelectBgColor,
               ),
               child: ListView.separated(
-                padding: EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
                 itemBuilder: (context, index) {
                   return ListTile(
                     leading: CircleAvatar(
-                      backgroundImage: AssetImage("assets/icons/uzb.png"),
+                      backgroundImage: AssetImage(Constants.languageList[index]['flag']),
                     ),
                     title: Text(
                       Constants.languageList[index]['language'],
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
@@ -63,20 +65,24 @@ class _LanguageSelectState extends State<LanguageSelect> {
                   );
                 },
                 separatorBuilder: (context, index) {
-                  return Divider();
+                  return const Divider();
                 },
                 itemCount: Constants.languageList.length,
               ),
             ),
           ),
+          const Spacer(),
           Container(
-            padding: EdgeInsets.all(10),
-            width: double.infinity,
-            height: MediaQuery.of(context).size.height * 0.09,
+            padding: const EdgeInsets.all(10),
+            width: getProportionScreenWidth(343),
+            height: getProportionScreenHeight(56),
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: ColorConstants.kPrimaryColor),
-              child: Text("Keyingisi"),
-              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                  primary: ColorConstants.kPrimaryColor),
+              child: const Text("Keyingisi"),
+              onPressed: () {
+                
+              },
             ),
           ),
         ],
@@ -84,5 +90,3 @@ class _LanguageSelectState extends State<LanguageSelect> {
     );
   }
 }
-
-
