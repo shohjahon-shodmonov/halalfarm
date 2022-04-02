@@ -53,7 +53,8 @@ class _LanguageSelectState extends State<LanguageSelect> {
                 itemBuilder: (context, index) {
                   return ListTile(
                     leading: CircleAvatar(
-                      backgroundImage: AssetImage(Constants.languageList[index]['flag']),
+                      backgroundImage:
+                          AssetImage(Constants.languageList[index]['flag']),
                     ),
                     title: Text(
                       Constants.languageList[index]['language'],
@@ -81,7 +82,8 @@ class _LanguageSelectState extends State<LanguageSelect> {
                   primary: ColorConstants.kPrimaryColor),
               child: const Text("Keyingisi"),
               onPressed: () {
-                
+                Navigator.pushNamedAndRemoveUntil(
+                    context, '/onboarding', (route) => false);
               },
             ),
           ),

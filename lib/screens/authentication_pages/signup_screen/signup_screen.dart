@@ -3,6 +3,7 @@ import 'package:halolfarm/constants/const.dart';
 import 'package:halolfarm/screens/authentication_pages/signup_screen/signup_components/input_decoration.dart';
 import 'package:halolfarm/screens/authentication_pages/auth_components/sign_up_appbar.dart';
 import 'package:halolfarm/screens/authentication_pages/signup_screen/signup_components/signup_with_social_network.dart';
+import 'package:halolfarm/screens/authentication_pages/signup_screen/signup_components/social_net_with_divider.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -23,8 +24,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
       resizeToAvoidBottomInset: false,
       body: Column(
         children: [
-          SizedBox(height: 40),
-          SignUpAppBar(),
+          const SizedBox(height: 40),
+          const SignUpAppBar(),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.35,
             child: Form(
@@ -57,44 +58,31 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
             ),
           ),
-          Spacer(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              SizedBox(
-                height: 10,
-                width: MediaQuery.of(context).size.width * 0.25,
-                child: Divider(
-                  thickness: 1.0,
-                ),
-              ),
-              Text(
-                "Ijtimoiy tarmoqlar orqali",
-                style: TextStyle(fontSize: 15),
-              ),
-              SizedBox(
-                height: 10,
-                width: MediaQuery.of(context).size.width * 0.25,
-                child: Divider(
-                  thickness: 1.0,
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 20),
-          SignUpWithSocialNetworkAccounts(),
-          SizedBox(height: 50),
+          const Spacer(),
+          const SocialNetWithDivider(),
+          const SizedBox(height: 20),
+          const SignUpWithSocialNetworkAccounts(),
+          const SizedBox(height: 50),
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             width: double.infinity,
             height: MediaQuery.of(context).size.height * 0.09,
             child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    primary: _nameController.text == null
-                        ? ColorConstants.kDisabledColor
-                        : ColorConstants.kPrimaryColor),
-                child: Text("Keyingisi"),
-                onPressed: () {}),
+              style: ElevatedButton.styleFrom(
+                  primary: _nameController.text != "" &&
+                          _dateController.text != "" &&
+                          _phoneController.text != ""
+                      ? ColorConstants.kPrimaryColor
+                      : ColorConstants.kDisabledColor),
+              child: const Text("Keyingisi"),
+              onPressed: () {
+                _nameController.text != "" &&
+                        _dateController.text != "" &&
+                        _phoneController.text != ""
+                    ? Navigator.pushNamed(context, '/smsValid')
+                    : null;
+              },
+            ),
           ),
         ],
       ),

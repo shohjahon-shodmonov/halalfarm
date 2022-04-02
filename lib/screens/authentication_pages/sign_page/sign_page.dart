@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:halolfarm/constants/const.dart';
 
@@ -16,7 +14,7 @@ class Sign extends StatelessWidget {
             padding: const EdgeInsets.all(30.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
-              children: [
+              children: const [
                 Text(
                   "Skip",
                   style: TextStyle(color: Colors.white),
@@ -25,14 +23,15 @@ class Sign extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.all(15),
+            margin: const EdgeInsets.all(15),
             height: MediaQuery.of(context).size.height * 0.15,
-            child: Image.asset('assets/icons/halal_icon2.png'),
+            child:
+                Image.asset('assets/icons/halal_header/halal_logo_bigger.png'),
           ),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 15),
+            margin: const EdgeInsets.symmetric(horizontal: 15),
             height: MediaQuery.of(context).size.height * 0.15,
-            child: Text(
+            child: const Text(
               "Chorva hayvonlarini onlayn boqish",
               style: TextStyle(
                   color: Colors.white,
@@ -41,9 +40,9 @@ class Sign extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 15),
+            margin: const EdgeInsets.symmetric(horizontal: 15),
             height: MediaQuery.of(context).size.height * 0.15,
-            child: Text(
+            child: const Text(
               "Xuddi “My Tom Cat” dagidek. Faqat haqiqiy hayvonlarni. Maqsad: musulmon aholini o’zi ishonadigan halol go’sht bilan ta’minlash",
               style: TextStyle(
                   color: Colors.white,
@@ -51,26 +50,30 @@ class Sign extends StatelessWidget {
                   fontWeight: FontWeight.w400),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             width: double.infinity,
             height: MediaQuery.of(context).size.height * 0.09,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(primary: Colors.white),
-              child: Text(
+              child: const Text(
                 "Ro'yxatdan o'tish",
                 style: TextStyle(color: Colors.black),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/signUp');
+              },
             ),
           ),
           TextButton(
-            child: Text(
+            child: const Text(
               "Akkountga kirish",
               style: TextStyle(color: Colors.white),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/signIn');
+            },
           ),
         ],
       ),

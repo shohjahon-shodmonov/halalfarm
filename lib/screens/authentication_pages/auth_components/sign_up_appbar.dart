@@ -9,11 +9,13 @@ class SignUpAppBar extends StatelessWidget {
       children: [
         TextButton(
           style: TextButton.styleFrom(primary: Colors.blue),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           child: Row(
             children: [
               Image.asset('assets/icons/back_vector.png'),
-              SizedBox(width: 5),
+              const SizedBox(width: 5),
               Text(
                 "Ortga",
                 style: TextStyle(

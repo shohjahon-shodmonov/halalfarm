@@ -26,7 +26,7 @@ class RouteGenerator {
       case "/sign":
         return MaterialPageRoute(builder: (_) => const Sign());
       case "/signUp":
-        return MaterialPageRoute(builder: (_) => const SignUpScreen());
+        return MaterialPageRoute(builder: (_) => SignUpScreen());
       case "/smsValid":
         return MaterialPageRoute(builder: (_) => const SmsValidationScreen());
       case "/signIn":
