@@ -20,6 +20,10 @@ class ColorConstants {
   // not have animals
   static const Color bgColorLightGrey = Color(0xFFF4F4F4);
   static const Color textColorDark60 = Color(0xFF6E716F);
+
+  // search screen
+  static const Color bgColorSearchField = Color(0xFFEFEFEF);
+  static const Color textColorDark50 = Color(0xFF878987);
 }
 
 class Constants {

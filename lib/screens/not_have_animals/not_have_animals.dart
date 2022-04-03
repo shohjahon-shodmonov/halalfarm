@@ -51,7 +51,7 @@ class NotHaveAnimals extends StatelessWidget {
                       alignment: Alignment.center,
                       height: getProportionScreenHeight(44),
                       width: getProportionScreenWidth(272),
-                      child: Text(
+                      child: const Text(
                         "O’zingiz istagan hayvonni sotib olishingiz mumkin",
                         style: TextStyle(
                           color: ColorConstants.textColorDark60,
@@ -63,7 +63,7 @@ class NotHaveAnimals extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 58.0),
-                      child: Container(
+                      child: SizedBox(
                         height: getProportionScreenHeight(56),
                         width: getProportionScreenWidth(343),
                         child: ElevatedButton(
@@ -73,7 +73,7 @@ class NotHaveAnimals extends StatelessWidget {
                               borderRadius: BorderRadius.circular(15),
                             ),
                           ),
-                          child: Text(
+                          child: const Text(
                             "+  Hayvon sotib olish",
                             style: TextStyle(fontSize: 17),
                           ),
