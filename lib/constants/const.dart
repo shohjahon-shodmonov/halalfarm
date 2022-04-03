@@ -16,6 +16,10 @@ class ColorConstants {
   static const Color textColorDarkInTarifCost = Color(0xFF120949);
   static const Color textColorDark80 = Color(0xFF3E423F);
   static const Color textColorDark90 = Color(0xFF262B27);
+
+  // not have animals
+  static const Color bgColorLightGrey = Color(0xFFF4F4F4);
+  static const Color textColorDark60 = Color(0xFF6E716F);
 }
 
 class Constants {
