@@ -8,6 +8,7 @@ import 'package:halolfarm/screens/home_screen/home_screen.dart';
 import 'package:halolfarm/screens/initial_screen/initial_screen.dart';
 import 'package:halolfarm/screens/language_select/language_select_screen.dart';
 import 'package:halolfarm/screens/membership/membership_tarifs.dart';
+import 'package:halolfarm/screens/not_have_animals/not_have_animals.dart';
 import 'package:halolfarm/screens/notification/notification_screen.dart';
 import 'package:halolfarm/screens/profile_screen/profile_screen.dart';
 import 'package:halolfarm/screens/search_screen/search_screen.dart';
@@ -43,6 +44,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const NotificationScreen());
       case "/profile":
         return MaterialPageRoute(builder: (_) => const ProfileScreen());
+      case "/not_have_animals":
+        return MaterialPageRoute(builder: (_) => const NotHaveAnimals());
     }
     return null;
   }
