@@ -7,6 +7,7 @@ import 'package:halolfarm/screens/boarding_screens/onboarding1.dart';
 import 'package:halolfarm/screens/home_screen/home_screen.dart';
 import 'package:halolfarm/screens/initial_screen/initial_screen.dart';
 import 'package:halolfarm/screens/language_select/language_select_screen.dart';
+import 'package:halolfarm/screens/membership/membership_tarifs.dart';
 import 'package:halolfarm/screens/splash_screen/splash_screen.dart';
 
 class RouteGenerator {
@@ -26,11 +27,13 @@ class RouteGenerator {
       case "/sign":
         return MaterialPageRoute(builder: (_) => const Sign());
       case "/signUp":
-        return MaterialPageRoute(builder: (_) => SignUpScreen());
+        return MaterialPageRoute(builder: (_) => const SignUpScreen());
       case "/smsValid":
         return MaterialPageRoute(builder: (_) => const SmsValidationScreen());
       case "/signIn":
         return MaterialPageRoute(builder: (_) => const SignInScreen());
+      case "/membership":
+        return MaterialPageRoute(builder: (_) => const MembershipTarifs());
     }
     return null;
   }

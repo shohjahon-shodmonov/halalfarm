@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:halolfarm/constants/const.dart';
 
 class SignUpAppBar extends StatelessWidget {
   const SignUpAppBar({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class SignUpAppBar extends StatelessWidget {
     return Row(
       children: [
         TextButton(
-          style: TextButton.styleFrom(primary: Colors.blue),
+          style: TextButton.styleFrom(primary: ColorConstants.kBlueColor),
           onPressed: () {
             Navigator.pop(context);
           },

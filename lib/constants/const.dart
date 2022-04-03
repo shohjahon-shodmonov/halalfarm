@@ -6,8 +6,16 @@ class ColorConstants {
   static const Color kDisabledColor = Color(0xFFCFD0CF);
   static const Color langSelectBgColor = Color(0xFFF2F1F7);
   static const Color textColorDark100 = Color(0xFF0E130F);
+  static const Color textColorDark70 = Color(0xFF565A57);
   static const Color textColorGreyDark = Color(0xFF959699);
-  static const Color kScaffoldBackground = Color(0xFFFFFFFF);
+  static const Color kScaffoldBackgroundPrimary = Color(0xFFFFFFFF);
+  static const Color kBlueColor = Color(0xFF007AFF);
+
+  // tariflar
+  static const Color textColorPurpleInTarifs = Color(0xFF7719D6);
+  static const Color textColorDarkInTarifCost = Color(0xFF120949);
+  static const Color textColorDark80 = Color(0xFF3E423F);
+  static const Color textColorDark90 = Color(0xFF262B27);
 }
 
 class Constants {

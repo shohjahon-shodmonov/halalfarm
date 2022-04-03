@@ -1,41 +1,77 @@
 import 'package:flutter/material.dart';
 import 'package:halolfarm/constants/const.dart';
 import 'package:halolfarm/core/components/size_config.dart';
+import 'package:halolfarm/screens/authentication_pages/sms_valid/sms_valid_components/sms_valid_texts.dart';
 import 'package:pinput/pinput.dart';
 
-class SmsValidationScreen extends StatelessWidget {
+class SmsValidationScreen extends StatefulWidget {
   const SmsValidationScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SmsValidationScreen> createState() => _SmsValidationScreenState();
+}
+
+class _SmsValidationScreenState extends State<SmsValidationScreen> {
+  final _formKey = GlobalKey<FormState>();
+
+  final TextEditingController _pinputController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(0, 0, 0, 0),
+        backgroundColor: Colors.transparent,
         elevation: 0,
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         leading: IconButton(
-          icon: Icon(Icons.close),
+          icon: const Icon(Icons.close),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            "SMS dagi kodni kiriting",
-            style:
-                TextStyle(color: ColorConstants.textColorDark100, fontSize: 24),
-          ),
-          Text(
-            "Kod ushbu raqamga yuborildi:+998 90 123 45 67",
-            style: TextStyle(
-              color: ColorConstants.textColorGreyDark,
-              fontSize: 15,
+          SmsValidTexts(),
+          Form(
+            key: _formKey,
+            child: Padding(
+              padding:
+                  EdgeInsets.symmetric(vertical: getProportionScreenHeight(46)),
+              child: Pinput(
+                length: 4,
+                pinAnimationType: PinAnimationType.slide,
+                controller: _pinputController,
+                //focusNode: focusNode,
+                //defaultPinTheme: SmsValidatorThemes.defaultPinTheme,
+                showCursor: true,
+                //cursor: SmsValidatorThemes.cursor,
+                //preFilledWidget: SmsValidatorThemes.preFilledWidget,
+                errorText: "Kod xato kiritildi",
+                errorTextStyle: const TextStyle(
+                  color: Colors.grey,
+                ),
+                //errorPinTheme: SmsValidatorThemes.errorTheme,
+                onCompleted: (v) {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/membership', (route) => false);
+                },
+              ),
             ),
-          )
+          ),
+          TextButton(
+            onPressed: () {},
+            child: const Text(
+              "Kodni qaytadan yuborish",
+              style: TextStyle(
+                color: ColorConstants.kBlueColor,
+                fontSize: 17,
+              ),
+            ),
+          ),
         ],
       ),
     );
