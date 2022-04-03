@@ -21,7 +21,7 @@ class SignUpWithSocialNetworkAccounts extends StatelessWidget {
               children: [
                 CircleAvatar(
                   backgroundColor: Colors.transparent,
-                  backgroundImage: AssetImage('assets/icons/googleicon.png'),
+                  backgroundImage: AssetImage('assets/icons/social_network/google.png'),
                 ),
                 Text(
                   "Google",
@@ -48,7 +48,7 @@ class SignUpWithSocialNetworkAccounts extends StatelessWidget {
                       CircleAvatar(
                         backgroundColor: Colors.transparent,
                         backgroundImage:
-                            AssetImage('assets/icons/appleicon.png'),
+                            AssetImage('assets/icons/social_network/apple.png'),
                       ),
                       Text(
                         "Apple",
@@ -74,7 +74,7 @@ class SignUpWithSocialNetworkAccounts extends StatelessWidget {
                       CircleAvatar(
                         backgroundColor: Colors.transparent,
                         backgroundImage:
-                            AssetImage('assets/icons/facebookicon.png'),
+                            AssetImage('assets/icons/social_network/facebook.png'),
                       ),
                       Text(
                         "Facebook",

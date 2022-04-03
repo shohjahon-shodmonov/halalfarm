@@ -5,6 +5,9 @@ class ColorConstants {
   static const Color kGreyColor = Color(0xFFF2F1F7);
   static const Color kDisabledColor = Color(0xFFCFD0CF);
   static const Color langSelectBgColor = Color(0xFFF2F1F7);
+  static const Color textColorDark100 = Color(0xFF0E130F);
+  static const Color textColorGreyDark = Color(0xFF959699);
+  static const Color kScaffoldBackground = Color(0xFFFFFFFF);
 }
 
 class Constants {
