@@ -28,6 +28,7 @@ class _SearchScreenState extends State<SearchScreen>
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
+      backgroundColor: ColorConstants.bgColorLightGrey,
       body: Column(
         children: [
           MySearchBar(),

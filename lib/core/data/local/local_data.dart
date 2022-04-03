@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Tarif {
   static List tariflar = [
     {
@@ -54,6 +56,55 @@ class Hayvonlar {
       "yoshi": "1.5 yillik",
       "narxi": "6 000 000",
       "rasmi": "assets/images/animals/cow.png"
+    },
+    {
+      "nomi": "Ot",
+      "yoshi": "1.5 yillik",
+      "narxi": "6 000 000",
+      "rasmi": "assets/images/animals/horse.png"
+    },
+    {
+      "nomi": "Sigir",
+      "yoshi": "1.5 yillik",
+      "narxi": "6 000 000",
+      "rasmi": "assets/images/animals/cow2.png"
+    },
+    {
+      "nomi": "Tovuq",
+      "yoshi": "1.5 yillik",
+      "narxi": "6 000 000",
+      "rasmi": "assets/images/animals/hen.png"
+    },
+    {
+      "nomi": "Quyon",
+      "yoshi": "1.5 yillik",
+      "narxi": "6 000 000",
+      "rasmi": "assets/images/animals/rabbit.png"
+    },
+  ];
+}
+
+class Fermalar {
+  static List fermalarHaqida = [
+    {
+      "nomi": "Yangi O'zbekiston Fermasi",
+      "joylashuv": "Toshkent vil., Oqqo'rg'on tumani",
+      "rasmi": "assets/images/farms/yangi_uzb.png",
+    },
+    {
+      "nomi": "Chiqchiq Farm",
+      "joylashuv": "Toshkent vil., Chiqchiq tumani",
+      "rasmi": "assets/images/farms/chirchiq.png",
+    },
+    {
+      "nomi": "Parkent Farm",
+      "joylashuv": "Toshkent vil., Parkent tumani",
+      "rasmi": "assets/images/farms/parkent.png",
+    },
+    {
+      "nomi": "Guliston Farm",
+      "joylashuv": "Sirdaryo vil., Guliston tumani",
+      "rasmi": "assets/images/farms/guliston.png",
     },
   ];
 }

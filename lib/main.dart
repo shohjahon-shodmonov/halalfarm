@@ -27,9 +27,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
-      onGenerateRoute: _router.routeGenerate,
-      //home: SearchScreen(),
+      // initialRoute: '/',
+      // onGenerateRoute: _router.routeGenerate,
+      home: SearchScreen(),
     );
   }
 }
